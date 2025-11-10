@@ -21,6 +21,12 @@ interface AnimeState {
   error: string | null;
   // Add a state to track if there are no results for a successful query
   noResults: boolean;
+  // --- Pagination State ---
+  currentPage: number;
+  totalPages: number;
+  hasNextPage: boolean;
+  // We'll also store the current query to use it for pagination
+  currentQuery: string;
 }
 
 // --- Jikan API Response Types ---
